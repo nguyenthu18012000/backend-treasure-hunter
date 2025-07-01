@@ -20,7 +20,8 @@ public class SecurityConfig {
             "/*/login",
             "/auth/register",
             "/swagger-ui.html",
-            "/swagger-ui/**"
+            "/swagger-ui/**",
+            "ws"
     );
 
     private final JwtTokenVerifier jwtTokenVerifier;
