@@ -1,7 +1,15 @@
 package com.ThuT.TreasureHunter.constant;
 
-public class CommonConstant {
-    public static final String AUTHORIZATION_HEADER = "Authorization";
+public interface CommonConstant {
+    String AUTHORIZATION_HEADER = "Authorization";
 
-    public static final String AUTH_ERROR_MESSAGE = "AuthErrorMessage";
+    String AUTH_ERROR_MESSAGE = "AuthErrorMessage";
+
+    interface RESPONSE_CODE {
+        String SUCCESS = "000";
+    }
+
+    interface RESPONSE_MESSAGE {
+        String SUCCESS = "Success";
+    }
 }
