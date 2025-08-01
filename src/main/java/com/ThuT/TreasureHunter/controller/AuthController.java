@@ -9,10 +9,7 @@ import com.ThuT.TreasureHunter.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -45,4 +42,15 @@ public class AuthController {
         );
         return ResponseEntity.ok(response);
     }
+
+//    // test
+//    @GetMapping("/userinfo")
+//    public ResponseEntity<?> getUserInfoFromToken() {
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        if (authentication != null && authentication.getPrincipal() instanceof UserEntity user) {
+//            Long userId = user.getId();
+//            return ResponseEntity.ok("User ID: " + userId);
+//        }
+//        return ResponseEntity.status(401).body("Unauthorized");
+//    }
 }

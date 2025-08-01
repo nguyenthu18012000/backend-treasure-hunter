@@ -1,5 +1,6 @@
 package com.ThuT.TreasureHunter.config;
 
+import com.ThuT.TreasureHunter.exception.CommonException;
 import com.ThuT.TreasureHunter.pojo.entity.postgres.UserEntity;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -45,8 +46,7 @@ public class JwtUtil {
 
         } catch (Exception ex) {
             log.error("generateLoginJwtToken: {}", ex.getMessage());
-//            throw new CustomException("aa");
-            return "";
+            throw new CommonException("500", "Can't generate token");
         }
     }
 
