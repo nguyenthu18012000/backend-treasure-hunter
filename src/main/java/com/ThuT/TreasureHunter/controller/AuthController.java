@@ -42,15 +42,4 @@ public class AuthController {
         );
         return ResponseEntity.ok(response);
     }
-
-//    // test
-//    @GetMapping("/userinfo")
-//    public ResponseEntity<?> getUserInfoFromToken() {
-//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//        if (authentication != null && authentication.getPrincipal() instanceof UserEntity user) {
-//            Long userId = user.getId();
-//            return ResponseEntity.ok("User ID: " + userId);
-//        }
-//        return ResponseEntity.status(401).body("Unauthorized");
-//    }
 }

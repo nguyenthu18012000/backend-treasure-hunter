@@ -8,4 +8,6 @@ public interface AuthService {
     void register(RegisterRequestDTO request);
 
     LoginResponseDTO login(LoginRequestDTO request);
+
+    Long getUserId();
 }
